@@ -1,12 +1,20 @@
 {
   "name": "thanatos",
   "version": "0.1.0",
+  "author": "shula6h@gmail.com",
   "private": true,
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=8.0.0",
+    "npm": "please-use-pnpm"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "18.15.13",
@@ -21,5 +29,9 @@
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.1",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "prettier": "^2.8.7"
   }
 }

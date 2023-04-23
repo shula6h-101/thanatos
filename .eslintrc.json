@@ -1,3 +1,38 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+  "globals": {
+    "React": "readonly"
+  },
+  "rules": {
+    "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }],
+    "semi": "error",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/destructuring-assignment": "error",
+    "react/forbid-prop-types": "error",
+    "react/prop-types": "error",
+    "react/no-unused-prop-types": "warn",
+    "import/extensions": "error",
+    "import/no-unresolved": "error",
+    "no-underscore-dangle": "error",
+    "import/prefer-default-export": "error",
+    "consistent-return": "error",
+    "no-param-reassign": "error",
+    "radix": "error",
+    "no-use-before-define": "error",
+    "react/prefer-stateless-function": "error",
+    "unicorn/no-null": "off",
+    // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
+    // e.g. "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/html-has-lang": "off",
+    "jsx-a11y/anchor-is-valid": "off"
+  }
 }
