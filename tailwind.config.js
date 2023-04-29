@@ -11,14 +11,32 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      animation: {
+        fade: 'fadeInDown .5s ease-in-out 0s 1 normal none running',
+      },
+      gridTemplateColumns: {
+        fluid: 'repeat(auto-fit, minmax(15rem, 1fr))',
+      },
+      keyframes: () => ({
+        fadeInDown: {
+          '0%': {
+            opacity: 0,
+            transform: 'translate3d(0,-100%,0)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateZ(0)',
+          },
+        },
+      }),
+      screens: {
+        sm: '576px',
+        md: '768px',
+        lg: '992px',
+        xl: '1200px',
+        xxl: '1400px',
+      },
     },
-    screens: {
-      xs: '375px',
-      sm: '600px',
-      md: '900px',
-      lg: '1200px',
-      xl: '1536px',
-    },
+    plugins: [],
   },
-  plugins: [],
 };

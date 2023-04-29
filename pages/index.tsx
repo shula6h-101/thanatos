@@ -1,7 +1,20 @@
-import { Inter } from 'next/font/google';
+import { GetServerSideProps } from 'next';
+import { Fragment } from 'react';
+import Home from './home';
 
-const inter = Inter({ subsets: ['latin'] });
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: 'home',
+      permanent: true,
+    },
+  };
+};
 
-export default function Home() {
-  return <main>project</main>;
+export default function MyApp() {
+  return (
+    <Fragment>
+      <Home />
+    </Fragment>
+  );
 }
