@@ -110,8 +110,8 @@
     transition: 0.5s;
 }
 
-.single-featured-services-box .icon svg,
-.single-featured-services-box .icon svg:before {
+.single-featured-services-box .icon .fi,
+.single-featured-services-box .icon .fi:before {
     font-size: 50px;
 }
 
@@ -291,7 +291,8 @@
 }
 
 .single-footer-widget {
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    padding: 10px 15px;
 }
 
 .single-footer-widget .logo {
@@ -445,6 +446,77 @@
     margin-bottom: 0
 }
 
+.copyright-area {
+    background-color: #000;
+    margin-top: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px
+}
+
+.copyright-area p {
+    color: #fff
+}
+
+.copyright-area p a {
+    display: inline-block;
+    color: #fff;
+    font-weight: 600
+}
+
+.copyright-area p a:hover {
+    color: #ff4800
+}
+
+.copyright-area ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+    text-align: right
+}
+
+.copyright-area ul li {
+    display: inline-block;
+    margin-left: 25px;
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    line-height: normal
+}
+
+.copyright-area ul li a {
+    color: #fff
+}
+
+.copyright-area ul li a:hover {
+    color: #ff4800
+}
+
+.copyright-area ul li:before {
+    content: "";
+    width: 4px;
+    height: 1px;
+    background: #fff;
+    left: -15px;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%)
+}
+
+.copyright-area ul li:first-child {
+    margin-left: 0
+}
+
+.copyright-area ul li:first-child:before {
+    display: none
+}
+
+.circle-map {
+    position: absolute;
+    top: 20%;
+    right: 18%;
+    z-index: -1
+}
+
 @media only screen and (max-width: 767px) {
     .main-banner {
         height: 100%;
@@ -498,7 +570,7 @@
         text-align: -webkit-center;
     }
 
-    .single-featured-services-box .icon svg:before {
+    .single-featured-services-box .icon .fi:before {
         font-size: 40px;
     }
 
@@ -678,7 +750,7 @@
         padding-bottom: 15px;
     }
 
-    .single-featured-services-box .icon svg:before {
+    .single-featured-services-box .icon .fi:before {
         font-size: 45px;
     }
 

@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import circleMap from '../../../assets/images/circle-map.png';
+import LineAnimationBackground from '../../shared-components/LineAnimationBackground';
 
 const Footer = () => {
   return (
     <footer className="footer-area">
       <div className="container">
-        <div className="flex">
-          <div className="max-md:basis-1/2 basis-1/4">
+        <div className="flex flex-wrap">
+          <div className="max-sm:basis-full max-lg:basis-1/2 basis-1/4">
             <div
               className="single-footer-widget"
               data-aos="fade-in"
@@ -25,28 +26,28 @@ const Footer = () => {
               <ul className="social">
                 <li>
                   <Link href="https://www.facebook.com/" target="_blank">
-                    <i className="flaticon-facebook-letter-logo"></i>
+                    <i className="fi fi-brands-facebook" />
                   </Link>
                 </li>
                 <li>
                   <Link href="https://twitter.com/" target="_blank">
-                    <i className="flaticon-twitter"></i>
+                    <i className="fi fi-brands-twitter" />
                   </Link>
                 </li>
                 <li>
                   <Link href="https://www.instagram.com/" target="_blank">
-                    <i className="flaticon-instagram-logo"></i>
+                    <i className="fi fi-brands-instagram" />
                   </Link>
                 </li>
                 <li>
                   <Link href="https://www.youtube.com/" target="_blank">
-                    <i className="flaticon-youtube-play-button"></i>
+                    <i className="fi fi-brands-youtube" />
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="max-md:basis-1/2 basis-1/2">
+          <div className="max-sm:basis-full max-lg:basis-1/2 basis-1/4">
             <div
               className="single-footer-widget"
               data-aos="fade-in"
@@ -76,7 +77,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="max-md:basis-1/2 basis-1/2">
+          <div className="max-sm:basis-full max-lg:basis-1/2 basis-1/4">
             <div
               className="single-footer-widget"
               data-aos="fade-in"
@@ -94,13 +95,10 @@ const Footer = () => {
                 <li>
                   <Link href="/contact/">Contact</Link>
                 </li>
-                <li>
-                  <Link href="/pricing/">Pricing</Link>
-                </li>
               </ul>
             </div>
           </div>
-          <div className="max-md:basis-1/2 basis-1/4">
+          <div className="max-sm:basis-full max-lg:basis-1/2 basis-1/4">
             <div
               className="single-footer-widget"
               data-aos="fade-in"
@@ -110,16 +108,14 @@ const Footer = () => {
               <h3>Contacts</h3>
               <ul className="footer-contact-list">
                 <li>
-                  <span>Address:</span>2750 Quadra Street <br /> Victoria, Canada
+                  <span>Address:</span>707 Marathahalli
+                  <br /> Bangalore, Karnataka
                 </li>
                 <li>
-                  <span>Email:</span>bariton@gmail.com
+                  <span>Email:</span>jb@gmail.com
                 </li>
                 <li>
-                  <span>Phone:</span>+44 587 154756
-                </li>
-                <li>
-                  <span>Fax:</span>+44 785 4578964
+                  <span>Phone:</span>+91 89894018**
                 </li>
               </ul>
             </div>
@@ -131,7 +127,7 @@ const Footer = () => {
           <div className="flex align-center">
             <div className="basis-1/2">
               <p>
-                {'Copyright ©2023 Job Buddy. All Rights Reserved'}
+                {'Copyright ©2023 Job Buddy. All Rights Reserved '}
                 <Link href="/" target="_blank">
                   Job Buddy
                 </Link>
@@ -154,11 +150,7 @@ const Footer = () => {
       <div className="circle-map">
         <Image src={circleMap} alt="image" />
       </div>
-      <div className="lines">
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-      </div>
+      <LineAnimationBackground />
     </footer>
   );
 };

@@ -1,8 +1,6 @@
-import { faAddressCard, faFile, faFileLines } from '@fortawesome/free-regular-svg-icons';
-
 // eslint-disable-next-line import/prefer-default-export
-export const bannerContent: { icon: any; title: string; id: string }[] = [
-  { title: 'Curriculum vitae', icon: faFile, id: 'title_1' },
-  { title: 'LinkedIn Profile', icon: faAddressCard, id: 'title_2' },
-  { title: 'Application Letter', icon: faFileLines, id: 'title_3' },
+export const bannerContent: { iconClass: string; title: string; id: string }[] = [
+  { title: 'Curriculum vitae', iconClass: 'fi fi-ts-license', id: 'title_1' },
+  { title: 'LinkedIn Profile', iconClass: 'fi fi-brands-linkedin', id: 'title_2' },
+  { title: 'Application Letter', iconClass: 'fi fi-ts-poll-h', id: 'title_3' },
 ];

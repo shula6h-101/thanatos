@@ -10,7 +10,7 @@ import { Slide } from '../../types';
 
 export interface CarouselProps {
   slides: Slide[];
-  renderSlide: FC;
+  renderSlide: any;
 }
 
 const Carousel: FC<CarouselProps> = ({ slides, renderSlide }) => {

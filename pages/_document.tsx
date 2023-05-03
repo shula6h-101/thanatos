@@ -12,6 +12,14 @@ export default function Document() {
           href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;display=swap"
           rel="stylesheet"
         />
+        <link
+          href={'https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'}
+          rel="stylesheet"
+        />
+        <link
+          href={'https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'}
+          rel="stylesheet"
+        />
       </Head>
       <body>
         <Main />

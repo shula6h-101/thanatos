@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { FC } from 'react';
 import { bannerContent } from '../../../constants/common';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const MainBanner: FC = () => {
   return (
@@ -45,7 +44,7 @@ const MainBanner: FC = () => {
               >
                 <div className="single-featured-services-box">
                   <div className="icon">
-                    <FontAwesomeIcon icon={item.icon} />
+                    <i className={item.iconClass} />
                   </div>
                   <h3 className="text-[23px] font-bold">{item.title}</h3>
                   <p>
