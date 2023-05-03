@@ -3,7 +3,7 @@ import Image from 'next/image';
 import about1 from '../../../assets/images/about/about1.jpg';
 import about2 from '../../../assets/images/about/about2.jpg';
 import Link from 'next/link';
-import PatternAnimationBg from '../PatternAnimationBg';
+import PatternAnimationBg from '../../shared-components/PatternAnimationBg';
 
 const About: FC = () => {
   return (

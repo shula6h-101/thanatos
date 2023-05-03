@@ -1,5 +1,4 @@
 import { GetServerSideProps } from 'next';
-import { Fragment } from 'react';
 import Home from './home';
 
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -12,9 +11,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
 };
 
 export default function MyApp() {
-  return (
-    <Fragment>
-      <Home />
-    </Fragment>
-  );
+  return <Home />;
 }

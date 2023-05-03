@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FC } from 'react';
 import { bannerContent } from '../../../constants/common';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const MainBanner: FC = () => {
   return (
@@ -36,7 +37,7 @@ const MainBanner: FC = () => {
           <div className="flex flex-wrap justify-center">
             {bannerContent.map((item, i) => (
               <div
-                key={i}
+                key={item.id}
                 className="max-sm:basis-full max-lg:basis-1/2 basis-1/3"
                 data-aos="fade-in"
                 data-aos-duration="1200"
@@ -44,7 +45,7 @@ const MainBanner: FC = () => {
               >
                 <div className="single-featured-services-box">
                   <div className="icon">
-                    <i className="flaticon-robot"></i>
+                    <FontAwesomeIcon icon={item.icon} />
                   </div>
                   <h3 className="text-[23px] font-bold">{item.title}</h3>
                   <p>

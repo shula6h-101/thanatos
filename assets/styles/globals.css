@@ -1,7 +1,8 @@
+@import "assets/styles/home.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "assets/styles/home.css";
 
 :root {
     --bs-blue: #0d6efd;
@@ -189,10 +190,10 @@ p {
 }
 
 abbr[title] {
-    -webkit-text-decoration: underline dotted;
+    /*-webkit-text-decoration: underline dotted;*/
     text-decoration: underline dotted;
     cursor: help;
-    -webkit-text-decoration-skip-ink: none;
+    /*-webkit-text-decoration-skip-ink: none;*/
     text-decoration-skip-ink: none;
 }
 

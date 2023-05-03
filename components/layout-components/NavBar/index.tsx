@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useContext, useEffect, useState } from 'react';
-import AuthContext from '../../state/auth/AuthContext';
-import { SingleNavItem } from '../../types';
+import AuthContext from '../../../state/auth/AuthContext';
+import { SingleNavItem } from '../../../types';
 
 interface NavbarProps {
   items: SingleNavItem[];
@@ -44,9 +44,9 @@ const NavBar: React.FC<NavbarProps> = ({ items, routeInfo }: NavbarProps) => {
         aria-label="Global"
       >
         <div className="flex md:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
-          </a>
+          <Link href="#" className="-m-1.5 p-1.5">
+            <span className="sr-only">#LOGO</span>
+          </Link>
         </div>
         <div className="flex md:hidden">
           <button
