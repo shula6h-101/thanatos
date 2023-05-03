@@ -2,8 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import circleMap from '../../../assets/images/circle-map.png';
 import LineAnimationBackground from '../../shared-components/LineAnimationBackground';
+import { FC } from 'react';
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <footer className="footer-area">
       <div className="container">
