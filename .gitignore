@@ -34,6 +34,3 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 /.idea
-
-# lock file
-pnpm-lock.yaml
