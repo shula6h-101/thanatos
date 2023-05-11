@@ -8,7 +8,7 @@ import 'swiper/css/scrollbar';
 import { FC } from 'react';
 import { Slide } from '../../types';
 
-export interface CarouselProps {
+interface CarouselProps {
   slides: Slide[];
   renderSlide: any;
 }

@@ -1,16 +1,23 @@
 import { ReactNode } from 'react';
 import { StaticImageData } from 'next/image';
 
-export interface SingleNavItem {
-  id: string;
-  name: string;
+export interface SubMenu {
+  key: string;
+  label: string;
   path: string;
   icon?: ReactNode;
-  nestedMenu?: Partial<SingleNavItem>[];
+}
+
+export interface SingleNavItem {
+  key: string;
+  label: string;
+  path: string;
+  icon?: ReactNode;
+  nestedMenu?: SubMenu[];
 }
 
 export interface Slide {
-  id: number;
+  key: number;
   content: string;
   altText: string;
   clientImage: StaticImageData;

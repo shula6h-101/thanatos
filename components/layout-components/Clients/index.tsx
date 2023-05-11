@@ -10,7 +10,7 @@ import Carousel from '../../shared-components/Carousel';
 const Clients = () => {
   const slides: Slide[] = [
     {
-      id: 1,
+      key: 1,
       content:
         'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour predefined words which dont look.',
       altText: 'Slide 1',
@@ -19,7 +19,7 @@ const Clients = () => {
       clientTitle: 'Founder & CEO',
     },
     {
-      id: 2,
+      key: 2,
       content:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       altText: 'Slide 2',
@@ -28,7 +28,7 @@ const Clients = () => {
       clientTitle: 'Intern',
     },
     {
-      id: 3,
+      key: 3,
       content:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       altText: 'Slide 3',
@@ -38,7 +38,7 @@ const Clients = () => {
     },
   ];
   const Slide = (slide: Slide) => {
-    const { content, clientImage, clientName, clientTitle, id } = slide;
+    const { content, clientImage, clientName, clientTitle, key } = slide;
     return (
       <div className="flex">
         <div className="max-lg:basis-full basis-1/2">
@@ -55,7 +55,7 @@ const Clients = () => {
           </div>
         </div>
         <div className="max-lg:basis-0 basis-1/2">
-          <div className={`client-image bg${id}`}>
+          <div className={`client-image bg${key}`}>
             <Image src={clientImage} alt="image" />
           </div>
         </div>

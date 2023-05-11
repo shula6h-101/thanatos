@@ -1,22 +1,16 @@
-import { Fragment } from 'react';
-import MainBanner from '../../components/layout-components/MainBanner';
-import About from '../../components/layout-components/About';
-import navigationConfig from '../../admin/NavConfig';
-import getRouteInfo from '../../utils';
-import Index from '../../components/layout-components/NavBar';
-import { useRouter } from 'next/router';
-import Clients from '../../components/layout-components/Clients';
-import Footer from '../../components/layout-components/Footer';
+import dynamic from 'next/dynamic';
+
+const Layout = dynamic(() => import('../../components/layout-components/Layout'));
+const MainBanner = dynamic(() => import('../../components/layout-components/MainBanner'));
+const About = dynamic(() => import('../../components/layout-components/About'));
+const Clients = dynamic(() => import('../../components/layout-components/Clients'));
 
 export default function Home() {
-  const router = useRouter();
   return (
-    <Fragment>
-      <Index items={navigationConfig} routeInfo={getRouteInfo(navigationConfig, router.pathname)} />
+    <Layout>
       <MainBanner />
       <About />
       <Clients />
-      <Footer />
-    </Fragment>
+    </Layout>
   );
 }
