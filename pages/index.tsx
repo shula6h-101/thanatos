@@ -1,7 +1,5 @@
 import { GetServerSideProps } from 'next';
-import dynamic from 'next/dynamic';
-
-const Home = dynamic(() => import('./home'));
+import Home from './home';
 
 export const getServerSideProps: GetServerSideProps = async () => {
   return {

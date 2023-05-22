@@ -578,14 +578,6 @@
         font-size: 19px;
     }
 
-    .about-area .col-lg-6:first-child {
-        order: 2;
-    }
-
-    .about-area .col-lg-6:nth-child(2) {
-        order: 1;
-    }
-
     .about-image {
         padding-bottom: 0;
         text-align: center;

@@ -1,9 +1,7 @@
-import dynamic from 'next/dynamic';
-
-const Layout = dynamic(() => import('../../components/layout-components/Layout'));
-const MainBanner = dynamic(() => import('../../components/layout-components/MainBanner'));
-const About = dynamic(() => import('../../components/layout-components/About'));
-const Clients = dynamic(() => import('../../components/layout-components/Clients'));
+import Layout from '../../components/layout-components/Layout';
+import MainBanner from '../../components/layout-components/MainBanner';
+import About from '../../components/layout-components/About';
+import Clients from '../../components/layout-components/Clients';
 
 export default function Home() {
   return (
