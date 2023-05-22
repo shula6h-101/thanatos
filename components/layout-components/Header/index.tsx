@@ -1,28 +1,25 @@
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useContext, useEffect, useState } from 'react';
+import { FC, useContext, useEffect, useState } from 'react';
 import AuthContext from '../../../state/auth/AuthContext';
-import { SingleNavItem } from '../../../types';
+import NavMenu from '../../shared-components/NavMenu';
+import navigationConfig from '../../../admin/NavConfig';
+import getRouteInfo from '../../../utils';
+import { useRouter } from 'next/router';
 
-interface NavbarProps {
-  items: SingleNavItem[];
-  routeInfo: SingleNavItem | undefined;
-}
-
-const NavBar: React.FC<NavbarProps> = ({ items, routeInfo }: NavbarProps) => {
+const Header: FC = () => {
+  const router = useRouter();
   const { authenticated } = useContext(AuthContext);
-  const [showNav, setShowNav] = useState(false);
+  const [solidNav, setSolidNav] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
+      const currentScrollPos = window.scrollY;
 
       if (currentScrollPos > 150) {
-        setShowNav(true);
+        setSolidNav(true);
       } else {
-        setShowNav(false);
+        setSolidNav(false);
       }
     };
 
@@ -36,7 +33,7 @@ const NavBar: React.FC<NavbarProps> = ({ items, routeInfo }: NavbarProps) => {
   return (
     <header
       className={`w-full max-[767px]:bg-white z-[999] transition-transform duration-600 transform ease-in ${
-        showNav ? 'fixed shadow-md bg-white animate-fade text-gray-900' : 'absolute'
+        solidNav ? 'fixed shadow-md bg-white animate-fade text-gray-900' : 'absolute'
       }`}
     >
       <nav
@@ -56,22 +53,11 @@ const NavBar: React.FC<NavbarProps> = ({ items, routeInfo }: NavbarProps) => {
             <span className="sr-only">Open main menu</span>
           </button>
         </div>
-        <div className="hidden md:flex md:gap-x-12">
-          {items.map((item) => (
-            <Link
-              key={item.id}
-              href={item.path}
-              className={`text-md font-semibold leading-6 ${
-                routeInfo?.id === item.id ? 'text-primary' : showNav ? '' : 'text-white'
-              }`}
-            >
-              {item.name}
-              {item.nestedMenu && (
-                <FontAwesomeIcon className="mx-1" icon={faChevronDown} size="xs" />
-              )}
-            </Link>
-          ))}
-        </div>
+        <NavMenu
+          items={navigationConfig}
+          routeInfo={getRouteInfo(navigationConfig, router.pathname)}
+          solidNav={solidNav}
+        />
         {authenticated ? (
           <Image
             className="w-10 h-10 rounded-full md:justify-end cursor-pointer"
@@ -84,7 +70,7 @@ const NavBar: React.FC<NavbarProps> = ({ items, routeInfo }: NavbarProps) => {
           <div className="hidden md:flex md:flex-1 md:justify-end">
             <Link
               href="#"
-              className={`text-md font-semibold leading-6 ${showNav ? '' : 'text-white'}`}
+              className={`text-md font-semibold leading-6 ${solidNav ? '' : 'text-white'}`}
             >
               Log in <span aria-hidden="true">&rarr;</span>
             </Link>
@@ -95,4 +81,4 @@ const NavBar: React.FC<NavbarProps> = ({ items, routeInfo }: NavbarProps) => {
   );
 };
 
-export default NavBar;
+export default Header;

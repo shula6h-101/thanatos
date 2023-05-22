@@ -16,10 +16,7 @@ export default function Document() {
           href={'https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'}
           rel="stylesheet"
         />
-        <link
-          href={'https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'}
-          rel="stylesheet"
-        />
+        <link href="/css/uicons-thin-straight.css" rel="stylesheet" />
       </Head>
       <body>
         <Main />
